@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'movies'], function () {
+    Route::get('/', 'MovieController@show');
+    Route::get('/{id}', 'MovieController@');
+    Route::post('/sync', 'MovieController@sync');
+});

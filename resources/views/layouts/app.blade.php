@@ -18,8 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
-<body>
+<body @guest style="background-image: url('https://i.blogs.es/a425fb/espinof-grandes-peliculas-y-series-que-van-mas-alla-de-la-tipica-historia-de-amor/1366_2000.jpg'); " @endguest>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
