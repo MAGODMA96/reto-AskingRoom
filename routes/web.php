@@ -21,8 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'movies'], function () {
-    Route::get('/', 'MovieController@show');
-    Route::get('/{id}', 'MovieController@');
-    Route::post('/sync', 'MovieController@sync');
+Route::group(['prefix' => 'movies', 'middleware' => 'auth'], function () {
+    // solicitar todos los productos
+    Route::get('/', 'MovieController@index')->name('index');
+    //solicitar un producto
+    Route::get('/{id}', 'MovieController@show')->name('show');
+    //sincronizar lista
+    Route::post('/sync', 'MovieController@sync')->name('sync');
 });
