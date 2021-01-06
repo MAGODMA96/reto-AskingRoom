@@ -7,11 +7,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'LOVE FILMS') }}</title>
-
+    <title>LOVE FILMS</title>
+    <link rel="icon" href="https://icons.iconarchive.com/icons/colorflow/colorflow_1/256/56-Movies-icon.png" sizes="16x16" type="image/png">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @auth
     <script src="{{ asset('js/custom.js') }}" defer></script>
+    @endauth
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -35,6 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @auth
                         <form id="form" action="{{route('sync')}}">
                             <div class="row">
                                 <div class="col">
@@ -56,6 +59,7 @@
                                 </div>
                             </div>
                         </form>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -14,7 +14,5 @@ class movies extends Model
     ];
 
 
-    protected $hidden = [
-        'id',
-    ];
+   
 }
