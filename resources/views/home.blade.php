@@ -8,6 +8,9 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
 
+
+
+
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -28,8 +31,15 @@
                                     <th scope="col">action</th>
                                 </tr>
                             </thead>
-                            <tbody id="indexview">
+                            <tbody>
+                                <tr>
+                                <listar-component inline-template>
+                                    <template v-for="item in items">
+                                    <li> @{{ item.title }} </li>
+                                    </template>
+                                </listar-component>
 
+                                </tr>
                             </tbody>
                         </table>
                     </div>

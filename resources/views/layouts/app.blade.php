@@ -11,9 +11,6 @@
     <link rel="icon" href="https://icons.iconarchive.com/icons/colorflow/colorflow_1/256/56-Movies-icon.png" sizes="16x16" type="image/png">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    @auth
-    <script src="{{ asset('js/custom.js') }}" defer></script>
-    @endauth
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
