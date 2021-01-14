@@ -17,7 +17,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/movie') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -35,7 +35,7 @@
                 <p class="text">Here you will find all the <strong>love movies</strong> of 2020</p>
                 <div class="links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/movie') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

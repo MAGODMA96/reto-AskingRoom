@@ -19,13 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'movies', 'middleware' => 'auth'], function () {
-    // solicitar todos los productos
-    Route::get('/', 'MovieController@index')->name('index');
-    //solicitar un producto
-    Route::get('/{id}', 'MovieController@show')->name('show');
-    //sincronizar lista
-    Route::post('/sync', 'MovieController@sync')->name('sync');
-});
+Route::get('/movie', 'MovieController@movies_index')->name('movie');
+
+Route::get('/movies/index', 'MovieController@index')->name('index');
+
+Route::post('/syncronizar', 'MovieController@sync')->name('syncronizar');
+
+Route::post('/eliminar/movie', 'MovieController@eliminar_movie')->name('eliminar.movie');
+
+

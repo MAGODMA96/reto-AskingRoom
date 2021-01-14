@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\movies;
 
@@ -19,9 +20,15 @@ class MovieController extends Controller
     }
 
     public function sync(Request $request){
-        $term = $request->term;
+
+        $validator = $request->validate([
+            'search'       => 'required',
+            'year'         => 'required',
+        ]);
+
+        $search = $request->search;
         $year = $request->year;
-        $url = "http://www.omdbapi.com/?apikey=a69b9960&s=".$term."&y=".$year."&type=movie";
+        $url = "http://www.omdbapi.com/?apikey=a69b9960&s=".$search."&y=".$year."&type=movie";
         $dato[] = json_decode(file_get_contents($url));
         $page = ceil($dato["0"]->totalResults / 10);
         $g = 0;
@@ -48,9 +55,31 @@ class MovieController extends Controller
                 }
             }
         $m = [];
+
         }
 
-        return  $g . " movies were saved ";
+        if($validator){
+            return response()->json(['error' => $validator]);
+        }else{
+            return response()->json('success');
+        }
+        
+        
+    //    return response()->json([ 'status'=>'success', $g]);
 
+        // return  $g . " movies were saved ";
+
+    }
+
+
+    public function movies_index(){
+        return view('movie');
+    }
+
+    public function eliminar_movie(Request $request){
+        
+        $movie = movies::where('id',$request->id)->firstOrFail();
+        $movie->delete();
+        return response()->json('success');
     }
 }

@@ -1,62 +1,61 @@
+html, body  {
+    background-image: url("https://i.blogs.es/a425fb/espinof-grandes-peliculas-y-series-que-van-mas-alla-de-la-tipica-historia-de-amor/1366_2000.jpg");
+    color: #fbfdfd;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    background-color:#202122c7;
+}
+.background {
+    background-color:#202122c7;
+}
 
-            html, body  {
-                background-image: url("https://i.blogs.es/a425fb/espinof-grandes-peliculas-y-series-que-van-mas-alla-de-la-tipica-historia-de-amor/1366_2000.jpg");
-                color: #fbfdfd;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-                background-color:#202122c7;
-            }
-            .background {
-                background-color:#202122c7;
-            }
+.full-height {
+    height: 100vh;
+}
 
-            .full-height {
-                height: 100vh;
-            }
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+.position-ref {
+    position: relative;
+}
 
-            .position-ref {
-                position: relative;
-            }
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+.content {
+    text-align: center;
+}
 
-            .content {
-                text-align: center;
-            }
+.title {
+    font-size: 84px;
+}
 
-            .title {
-                font-size: 84px;
-            }
+.links > a {
+    color: #ffffff;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(220, 68, 68);
+    border-radius:15px;
+}
 
-            .links > a {
-                color: #ffffff;
-                padding: 0 25px;
-                font-size: 15px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                background: rgb(220, 68, 68);
-                border-radius:15px;
-            }
+.m-b-md {
+    margin-bottom: 30px;
+}
+p.text {
+    font-size: 25px;
+    /* color:bisque; */
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-            p.text {
-                font-size: 25px;
-                /* color:bisque; */
-
-            }
+}
