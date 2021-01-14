@@ -34,3 +34,8 @@ npm install
 Php artisan migrate --seed
 ```
 
+usuario: `todo@love.com`
+
+Contraseña: `@2jIt%z3C8PNW%!lG5&`
+
+
